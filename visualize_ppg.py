@@ -28,10 +28,10 @@ def visulize_ppg(new_path):
     plt.plot(ppg_list)
     # plt.plot(PPG_peaks_fil_sq, ppg[PPG_peaks_fil], 'x')
     # plt.title('subject'+str(Subject_num)+'-'+str(Phase_num))
-    plt.savefig("geun_ppg.png")
+    plt.savefig("nahyun.png")
 
 if __name__ == "__main__":
-    old_path = "ppg/geun_ppg.txt"
+    old_path = "ppg/soyoung_ppg_split.txt"
     # new_path = "new_ppg_data.txt"
     # convert_ppg(old_path, new_path)
     visulize_ppg(old_path)

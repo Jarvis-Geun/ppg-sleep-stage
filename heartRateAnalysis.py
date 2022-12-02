@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # ppg, timer = hp.load_exampledata(2)
-ppg = np.loadtxt("/Users/geun/github/ppg-sleep-stage/ppg/geun_ppg.txt")
-timer = np.loadtxt("/Users/geun/github/ppg-sleep-stage/ppg/geun_time.txt", dtype=np.str_)
+ppg = np.loadtxt("ppg/sean_ppg_split.txt")
+timer = np.loadtxt("ppg/sean_time_split.txt", dtype=np.str_)
 
 # shape (-1, 2) ==> shape (-1, )
 list_timer = []

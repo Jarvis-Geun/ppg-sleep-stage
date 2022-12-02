@@ -34,10 +34,8 @@ def main(args):
     # Save PPG data to text file
     serial_get_ppg(args, py_serial, start_time)
 
-
     # TODO
     # Visualize PPG in real time
-
 
     return 
 
