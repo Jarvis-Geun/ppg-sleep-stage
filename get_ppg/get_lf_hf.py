@@ -55,6 +55,6 @@ def hrv_analysis(ppg):
 
 if __name__=="__main__":
     # ppg = np.loadtxt("40min_data/jiu/jiu_ppg_split.txt")
-    ppg = np.loadtxt("40min_data/yong/yong_ppg_split.txt")
+    ppg = np.loadtxt("40min_data/hju/hju_ppg_split.txt")
     result = hrv_analysis(ppg)
     print(result)

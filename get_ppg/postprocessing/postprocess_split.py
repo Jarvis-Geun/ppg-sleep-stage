@@ -22,8 +22,8 @@ def postprocess_time(raw_path, time_path):
 
 
 if __name__=="__main__":
-    raw_path = "../40min_data/yong/yong_ppg.txt"
-    ppg_path = "../40min_data/yong/yong_ppg_split.txt"
-    time_path = "../40min_data/yong/yong_time_split.txt"
+    raw_path = "../40min_data/geun/geun_ppg.txt"
+    ppg_path = "../40min_data/geun/geun_ppg_split.txt"
+    time_path = "../40min_data/geun/geun_time_split.txt"
     postprocess_ppg(raw_path, ppg_path)
     postprocess_time(raw_path, time_path)
