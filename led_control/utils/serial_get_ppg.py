@@ -53,7 +53,8 @@ def serial_get_ppg(args, py_serial, start_time, LED):
                 if minute > 5:
                     # 106 : sample rate
                     # 1분당 106개의 ppg 데이터가 저장되므로 이를 제거하여 5분동안의 데이터만 사용
-                    ppg_five_minute = ppg_five_minute[106*60-1:]
+                    # ppg_five_minute = ppg_five_minute[106*60-1:]
+                    ppg_five_minute = ppg_five_minute[79*60-1:]
 
                 heart_rate_ts, PPG_nni, heart_rate = analyze_ppg(np.array(ppg_five_minute), minute)
                 result_txt = open("{}.txt".format(args.path_result), "a")
@@ -62,9 +63,9 @@ def serial_get_ppg(args, py_serial, start_time, LED):
 
                 result_txt.write(str(curr_time) + ' ' + str(minute) + ' ' + str(heart_rate_ts) + ' ' + str(PPG_nni) + ' ' + str(heart_rate) + "\n")
 
-                # 이전 BPM보다 2%씩 감소할 경우, LED 조명 감소
-                if (heart_rate <= before_heart_rate * 0.98) or (PPG_nni >= before_PPG_nni * 1.02):
-                    print("change light")
+                # 이전 BPM보다 1%씩 감소할 경우, LED 조명 감소
+                if (heart_rate <= before_heart_rate * 0.99) or (PPG_nni >= before_PPG_nni * 1.01):
+                    print("Change light")
                     LED -= 1
                     if LED <= 0:
                         LED = 0
